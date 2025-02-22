@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { Chart, Check, Grid, Header } from "./components";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const data = [
+    { name: "10/02/25", study: 3, job: 2 },
+    { name: "11/02/25", study: 2, job: 3 },
+    { name: "12/02/25", study: 3, job: 4 },
+    { name: "13/02/25", study: 6, job: 3 },
+    { name: "14/02/25", study: 5, job: 2 },
+    { name: "15/02/25", study: 1, job: 9 },
+    { name: "16/02/25", study: 4, job: 4 },
+  ];
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Header />
+      <Grid data="data teste" />
+      <div style={{display: "flex"}}>
+        <Chart data={data} />
+        <Check />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

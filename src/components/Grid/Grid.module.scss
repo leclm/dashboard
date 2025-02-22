@@ -1,0 +1,22 @@
+@use '../../assets/styles/colors' as *;
+@use '../../assets/styles/sizes' as *;
+
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  padding: 2rem;
+}
+
+@media (min-width: $medium) and (max-width: $large) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: $large) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

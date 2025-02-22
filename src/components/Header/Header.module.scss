@@ -1,0 +1,30 @@
+@use '../../assets/styles/colors' as *;
+@use '../../assets/styles/sizes' as *;
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $dark-gray;
+  color: $white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  p {
+    color: $white;
+    font-size: 26px;
+    font-weight: 400;
+    padding: 0;
+    margin: 20px;
+  }
+
+  @media (min-width: $medium) {
+    p {
+      font-size: 28px;
+    }
+  }
+}
